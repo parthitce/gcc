@@ -1511,6 +1511,10 @@ bpf-*-*)
         extra_headers="bpf-helpers.h"
         use_gcc_stdint=provide
         ;;
+tricore*-*-*)
+       tm_file="${tm_file} elfos.h newlib-stdint.h"
+       tmake_file="${tmake_file} tricore/t-tricore"
+       ;;
 cr16-*-elf)
         tm_file="elfos.h ${tm_file} newlib-stdint.h"
         tmake_file="${tmake_file} cr16/t-cr16 "
